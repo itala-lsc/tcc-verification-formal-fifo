@@ -1,0 +1,15 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-lwdgen
+-access
+rwc
+-uvm
+-uvmhome
+/tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+-svseed
+100007800
+-f
+file_list.f
++UVM_VERBOSITY=UVM_DEBUG

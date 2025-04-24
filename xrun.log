@@ -1,0 +1,63 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Apr 15, 2025 at 19:23:01 -03
+xrun
+	-lwdgen
+	-access rwc
+	-uvm
+	-uvmhome /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+	-svseed 100007800
+	-f file_list.f
+		-sv
+		/home/ciinovador/itala.couto/tcc2/fifo_if.sv
+		+incdir+/home/ciinovador/itala.couto/tcc2/objects/
+		+incdir+/home/ciinovador/itala.couto/tcc2/components/
+		/home/ciinovador/itala.couto/tcc2/fifo_pkg.sv
+		/home/ciinovador/itala.couto/tcc2/sync_fifo.sv
+		/home/ciinovador/itala.couto/tcc2/top_tb.sv
+	+UVM_VERBOSITY=UVM_DEBUG
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_DEBUG
+
+Recompiling... reason: file './components/fifo_scoreboard.sv' is newer than expected.
+	expected: Tue Apr 15 16:37:05 2025
+	actual:   Tue Apr 15 19:22:49 2025
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+file: /home/ciinovador/itala.couto/tcc2/fifo_pkg.sv
+            received_data.put(item);
+                            |
+xmvlog: *W,BADBIF (/home/ciinovador/itala.couto/tcc2/components/fifo_scoreboard.sv,26|28): a function cannot enable a task [10.3.4(IEEE)].
+            expected_data.put(item);
+                            |
+xmvlog: *W,BADBIF (/home/ciinovador/itala.couto/tcc2/components/fifo_scoreboard.sv,29|28): a function cannot enable a task [10.3.4(IEEE)].
+	package worklib.fifo_pkg:sv
+		errors: 0, warnings: 2
+file: /home/ciinovador/itala.couto/tcc2/top_tb.sv
+	module worklib.top_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		fifo_pkg
+		top_tb
+        .din    (dut_if.din),
+                          |
+xmelab: *W,CUVMPW (./top_tb.sv,31|26): port sizes differ in port connection(16/8) for the instance(top_tb) .
+        .dout   (dut_if.dout),
+                           |
+xmelab: *W,CUVMPW (./top_tb.sv,32|27): port sizes differ in port connection(16/8) for the instance(top_tb) .
+		  monitor.mon_analysis_port.connect(sequencer.seq_item_export);
+		                                                            |
+xmelab: *E,TYCMPAT (./components/fifo_agent.sv,41|62): formal and actual do not have assignment compatible data types on instance 'fifo_pkg' (expecting datatype compatible with 'class uvm_pkg::uvm_port_base#(.IF(class uvm_pkg::uvm_tlm_if_base#(.T1(class fifo_pkg::fifo_item),.T2(class fifo_pkg::fifo_item))))' but found 'class uvm_pkg::uvm_seq_item_pull_imp#(.REQ(class fifo_pkg::fifo_item),.RSP(class fifo_pkg::fifo_item),.IMP(class uvm_pkg::uvm_sequencer#(.REQ(class fifo_pkg::fifo_item),.RSP(class fifo_pkg::fifo_item))))' instead).
+            received_data.put(item);
+                            |
+xmelab: *E,TCIFNF (./components/fifo_scoreboard.sv,26|28): Task call in function is illegal.
+            expected_data.put(item);
+                            |
+xmelab: *E,TCIFNF (./components/fifo_scoreboard.sv,29|28): Task call in function is illegal.
+xrun: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 1), exiting.
+TOOL:	xrun(64)	23.09-s013: Exiting on Apr 15, 2025 at 19:23:02 -03  (total: 00:00:01)

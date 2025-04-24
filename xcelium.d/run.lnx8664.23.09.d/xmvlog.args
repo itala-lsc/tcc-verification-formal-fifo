@@ -1,0 +1,36 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.23.09.d
+-RUNMODE
+-UVMNOSINGLESTEP
+-define
+UVM_PLI
+-sv
+/home/ciinovador/itala.couto/tcc2/fifo_if.sv
+-INCDIR
+/home/ciinovador/itala.couto/tcc2/objects/
+-INCDIR
+/home/ciinovador/itala.couto/tcc2/components/
+/home/ciinovador/itala.couto/tcc2/fifo_pkg.sv
+/home/ciinovador/itala.couto/tcc2/sync_fifo.sv
+/home/ciinovador/itala.couto/tcc2/top_tb.sv
+-CDSLIB
+./xcelium.d/run.lnx8664.23.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.23.09.d/hdlrun.var
+-I_INCDIR
+/tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/additions/sv
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.23.09.d/xllibs
+-ALLOWUNBOUND
+-ENABLEOIGW
